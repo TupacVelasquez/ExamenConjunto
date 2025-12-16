@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.example.velasqueztupac_leecion1.VelasquezTupacLeecion1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.685 s -- in org.example.velasqueztupac_leecion1.VelasquezTupacLeecion1ApplicationTests

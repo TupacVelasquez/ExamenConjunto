@@ -1,0 +1,12 @@
+org\example\velasqueztupac_leecion1\model\Currency.class
+org\example\velasqueztupac_leecion1\service\SupportTicketSpecification.class
+org\example\velasqueztupac_leecion1\repository\SupportTicketRepository.class
+org\example\velasqueztupac_leecion1\service\SupportTicketService.class
+org\example\velasqueztupac_leecion1\exception\ErrorResponse.class
+org\example\velasqueztupac_leecion1\model\TicketStatus.class
+org\example\velasqueztupac_leecion1\VelasquezTupacLeecion1Application.class
+org\example\velasqueztupac_leecion1\model\SupportTicket.class
+org\example\velasqueztupac_leecion1\model\Priority.class
+org\example\velasqueztupac_leecion1\controller\SupportTicketController.class
+org\example\velasqueztupac_leecion1\exception\GlobalExceptionHandler.class
+org\example\velasqueztupac_leecion1\service\SupportTicketServiceImpl.class
