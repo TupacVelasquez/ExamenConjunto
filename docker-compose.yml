@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # 1. BASE DE DATOS
+  mysql-db:
+    image: mysql:8.0
+    container_name: examen-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: tickets_db
+    ports:
+      - "3307:3306" 
+    networks:
+      - examen-net
+
+  # 2. BACKEND 
+  backend:
+    build: ./backend 
+    container_name: examen-backend
+    ports:
+      - "8080:8080"
+    environment:
+      
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/tickets_db?allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123
+      
+    depends_on:
+      - mysql-db
+    networks:
+      - examen-net
+
+  # 3. FRONTEND (React)
+  frontend:
+    build: ./frontend # <--- Construye el Dockerfile de React
+    container_name: examen-frontend
+    ports:
+      - "3000:80"  # Accederás por el puerto 80 (http://localhost)
+    depends_on:
+      - backend
+    networks:
+      - examen-net
+
+networks:
+  examen-net:
+    driver: bridge
